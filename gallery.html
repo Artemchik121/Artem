@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея | Мир космоса</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <i class="fas fa-rocket"></i>
+            <h1>Мир космоса</h1>
+        </div>
+        <nav>
+            <ul class="flex-nav">
+                <li><a href="index.html"><i class="fas fa-home"></i> Главная</a></li>
+                <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> Галерея</a></li>
+                <li><a href="contacts.html"><i class="fas fa-envelope"></i> Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-header">
+            <h2><i class="fas fa-camera-retro"></i> Наша галерея космоса</h2>
+            <div class="stats-bar">
+                <span><i class="fas fa-image"></i> Всего фото: <span id="image-counter">0</span></span>
+                <span><i class="fas fa-heart"></i> Всего лайков: <span id="total-likes">0</span></span>
+            </div>
+        </div>
+
+        <div class="gallery-flex" id="image-gallery">
+            <!-- Карточки будут добавлены через JS -->
+        </div>
+    </main>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="">
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                    <div class="modal-stats">
+                        <button id="modalLikeBtn" class="modal-like-btn">
+                            <i class="far fa-heart"></i>
+                            <span id="modalLikeCount">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>Арабян Артем, студент 1 курса, 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
